@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Griffy&display=swap');
+html{
+	font-size: 62.5%;
+}
+
+:root {
+	--Title_font: "Griffy";
+	--body_font: "Caveat";
+/**Colors*/
+	--color1:	#d7be69;
+	--color2:	#a47e4f;
+	--color3:	#5c6b28;
+	--color4:	#424a26;
+	--color5:	#2a3019;
+	--color6:	#62d75f;
+	--color7: #34c230;
+	--color8: #248721;
+	--color9: #175616;
+	--color10: 	#0a260a;
+	--color11: #87673a;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: var(--body_font);
+	background: linear-gradient(45deg, var(--color5), var(--color9));
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+	
+/** NAV */
+
+#navegation_bar {
+		background: linear-gradient(45deg, var(--color5), var(--color9));
+		width: 100%;
+		height: 6rem;
+		margin: 0;
+		padding: 0;
+		position: fixed;
+		top: 0;
+		z-index: 1000;
+		border-bottom: 0.6rem solid var(--color10);
+}
+
+nav {
+		display: flex;
+		justify-content: center; 
+		gap: 4rem;
+		padding: 1rem 0;
+		margin: 0;
+}
+
+nav a {
+		color: white;
+		text-decoration: none;
+		font-size: 1.6rem;
+		padding: 0.5rem 1rem;
+		transition: color 0.3s ease;
+		font-weight: 500;
+}
+
+nav a:hover {
+		color: var(--color2); 
+}
+
+/*? BUTTONS */
+.icon-link{
+	display: inline-flex;
+	align-items: center;
+	gap: 1rem;
+	text-decoration: none;
+	color: white;
+	padding: 0.8rem 1.5rem;
+	transition: all 0.3s ease;
+	border: 0.3rem solid var(--color7);
+	border-radius: 0.8rem;
+}
+
+.icon-link svg{
+	fill: currentColor; 
+	stroke-width: 1;
+	transition: all 0.3s ease;
+	border: 0.2rem solid var(--color7);
+	border-radius: 50%;
+	padding: 0.2rem;
+}
+
+.icon-link span {
+    font-size: 3rem;
+    font-family: var(--body_font);
+    white-space: nowrap;
+    line-height: 1;
+		
+}
+
+.icon-link:hover svg{
+	color: var(--color1); 
+	border-color:	var(--color1);
+	transform: translateY(-0.4rem);
+}
+
+.icon-link:hover{
+	color: var(--color1); 
+	border-color:	var(--color1);
+}
+
+.material-symbols-outlined {
+	font-variation-settings:
+			'FILL' 0, 
+			'wght' 400,
+			'GRAD' 0,
+			'opsz' 24;
+    font-family: 'Material Symbols Outlined' !important;
+    vertical-align: middle;
+}
+
+.icon-symbol{
+	color: currentColor; 
+	
+	width: 3rem; 
+	height: 3rem;
+	
+	border: 0.2rem solid var(--color7);
+	border-radius: 50%;
+	padding: 0.2rem;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	transition: all 0.3s ease;
+
+	font-size: 3rem !important;
+}
+
+.icon-link:hover  .icon-symbol{
+	color: var(--color1);
+	border: 0.2rem solid var(--color1);
+	transform: translateY(-0.4rem);
+}
+
+.buttons_desc{
+	font-family: var(--body_font);
+}
+/*? BUTTONS */
+
+/** TITLE */
+
+#title_div{
+	background-image: url(../img/Title_Background.jpg);
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	width: 100%;
+	height: 30vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1rem solid var(--color10);
+	border-bottom: 1rem solid var(--color10);
+	margin-top: 6rem;
+}
+
+#title_div header h1{
+	font-family: var(--Title_font);
+	color: var(--color8);
+	font-size: 14rem;
+	padding: 1rem;
+	text-align: center;
+	text-shadow:
+	-0.6rem -0.3rem 0 black;
+}
