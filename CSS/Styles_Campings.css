@@ -18,6 +18,8 @@ html{
 	--color9: #175616;
 	--color10: 	#0a260a;
 	--color11: #87673a;
+	--title_color: #248721ad;
+	/** Font Size */
 }
 
 *{
@@ -178,10 +180,172 @@ nav a:hover {
 
 #title_div header h1{
 	font-family: var(--Title_font);
-	color: var(--color8);
+	color: white;
 	font-size: 14rem;
 	padding: 1rem;
 	text-align: center;
-	text-shadow:
-	-0.6rem -0.3rem 0 black;
+	text-shadow:0 1rem 4rem var(--color6);
+
+}
+
+/** CARDS CAMPINGS */
+
+.container{
+	display: grid;
+	place-items:center;
+	margin-inline: 2.4rem;
+	padding-block: 8rem;
+}
+
+.card_container{
+	display: grid;
+	row-gap: 5.6rem;
+}
+
+.card_article{
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 1rem 4rem var(--color6);
+	border-radius: 2.4rem;
+}
+
+.card_img{
+	display: block;
+	max-width: 100%;
+	height: 30rem;
+	object-fit: cover;
+	width: 58.8rem;
+	border-radius: 2.4rem;
+}
+
+.card_data{
+	width: 48.8rem;
+	background-color: wheat;
+	padding: 1.5rem 2rem;
+	box-shadow: 0 1.2rem 3.8rem hsla(0, 0%, 0%, .15);
+	border-radius: 1.6rem;
+	position: absolute;
+	bottom: -14.4rem;
+	left: 0;
+	right: 0;
+	margin-inline: auto;
+	opacity: 0;
+	transition: opacity 1s 1s;
+}
+
+.card_description{
+	display: block;
+	font-size: 1.7rem;
+	margin-bottom: .75rem;
+}
+
+.card_title{
+	font-size: 4rem;
+	font-weight: 500;
+	color: var(--color11);
+	margin-bottom: 1.2rem;
+}
+
+.card_buttom{
+	text-decoration: underline solid var(--color11);
+	font-size: 2.5rem;
+	font-weight: 50rem;
+	color: var(--color10);
+}
+
+.card_botton:hover{
+	text-decoration: underline;
+}
+
+/** CARD ANIMATIONS*/
+.card_article:hover .card_data{
+	animation: show-data 1s forwards;
+	opacity: 1;
+	transition: opacity .3s;
+}
+
+.card_article:hover{
+	animation: remove-overflow 2s forwards;
+}
+
+.card_article:not(:hover){
+	animation: show-overflow 2s forwards;
+}
+
+.card_article:not(:hover) .card_data{
+	animation: remove-data 1s forwards;
+}
+
+@keyframes show-data {
+  50% {
+    transform: translateY(-16rem);
+  }
+  100% {
+    transform: translateY(-11.2rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-11.2rem);
+  }
+  50% {
+    transform: translateY(-16rem);
+  }
+  100% {
+    transform: translateY(.8rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 34rem) {
+  .container {
+    margin-inline: 1.6rem;
+  }
+
+  .card_data {
+    width: 25rem;
+    padding: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 76.8rem) {
+  .card_container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.4rem;
+  }
+}
+
+
+@media screen and (min-width: 112rem) {
+  .container {
+    height: 100vh;
+  }
+
+  .card_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card_img {
+    width: 34.8rem;
+		height: 25rem;
+  }
+  .card_data {
+    width: 31.6rem;
+    padding-inline: 4rem;
+  }
 }
