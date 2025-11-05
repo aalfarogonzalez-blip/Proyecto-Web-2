@@ -223,6 +223,7 @@ a:focus, button:focus {
   position: relative;
   transition: all 0.5s ease;
   margin: 0 auto;
+  box-shadow: 0 1rem 4rem var(--light-sage);
 }
 
 .card_item:hover {
@@ -288,6 +289,7 @@ a:focus, button:focus {
   overflow: hidden;
   position: relative;
   transition: 1s all ease;
+  box-shadow: 0 1rem 4rem var(--light-sage);
 }
 
 .card:hover {
@@ -557,4 +559,5 @@ footer {
     max-width: 120rem;
     margin: 2rem auto 0;
   }
+
 }
