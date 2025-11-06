@@ -13,7 +13,7 @@ html {
   --sage:            #40916C;
   --light-sage:      #74C69D;
   --terracotta:      #BC6C25;
-  --sand:            #E9C46A;
+  --sand:            #ddb892;
   --clay:            #D4A373;
   --charcoal:        #264653;
   --paper:           #FEFAE0;
@@ -35,7 +35,9 @@ html {
 
 body {
   font-family: var(--body_font);
-  background: linear-gradient(45deg, var(--deep-forest), var(--forest));
+  background-image: url(../img/Background_img.jpg);
+  background-size: cover;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,7 +173,8 @@ a:focus, button:focus {
 
 /** TITLE */
 #title_div {
-  background-image: url(../img/Title_Background.jpg);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1rem);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -181,7 +184,6 @@ a:focus, button:focus {
   justify-content: center;
   align-items: center;
   border-top: 1rem solid var(--deep-forest);
-  border-bottom: 1rem solid var(--deep-forest);
   margin-top: 6rem;
 }
 
@@ -191,7 +193,7 @@ a:focus, button:focus {
   font-size: 14rem;
   padding: 1rem;
   text-align: center;
-  text-shadow: 0 1rem 4rem var(--light-sage);
+  text-shadow: 0 2rem 4rem #66b266;
 }
 
 /** TIPS CARD*/
